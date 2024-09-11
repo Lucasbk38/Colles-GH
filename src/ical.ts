@@ -48,7 +48,7 @@ class ICalProp {
         if (typeof value === 'object')
             value = value.toText()
 
-        return this.key + ':' + value + '\n'
+        return this.key + ':' + value + '\r\n'
     }
 }
 

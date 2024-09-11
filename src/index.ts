@@ -22,7 +22,7 @@ for (const eleve of colloscope.eleves) {
             const enseignement = colloscope.enseignements.find(e => e.id === enseignementId)
 
             return {
-                id,
+                id: `${ id }-${ semaine }`,
                 start: ICalDate.from(new Date(startUTC)),
                 end: ICalDate.from(new Date(endUTC)),
                 colleur: colloscope.colleurs.find(e => e.id === colleur).user,
@@ -45,6 +45,8 @@ for (const eleve of colloscope.eleves) {
     })
 
     calendar.addEvents(colles)
+
+    console.log(colles.filter((e, i) => colles.some((c, j) => i !== j && e.data.id === c.data.id)))
     
     writeFile(`./users/${ eleve.user.first_name }_${ eleve.user.last_name }.ics`, calendar.toText())
 }
