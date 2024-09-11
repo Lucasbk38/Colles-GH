@@ -6,6 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    Sub page
+    Page en cours de création
+
+    <select id="select"></select>
+
+    <button id="copy-button">Copier le lien (recommandé)</button>
+    <button id="alert-button">Afficher le lien (si la copie n'a pas fonctionné)</button>
+
+    <script>
+        (async () => {
+            const colloscope = await fetch('./data/colloscope.json').then(e => e.json())
+            const select = document.getElementById('select')
+
+            for (const { first_name, last_name } of colloscope.eleves.map(e => e.user)) {
+                const option = document.createElement('option')
+
+                option.value = `${ first_name }_${ last_name }`
+                option.textContent = `${ first_name } ${ last_name }`
+                
+                select.append(option)
+            }
+
+            const getLink = () => `https://d7kk.short.gy/colles/${ select.value }.ics`
+
+            document.getElementById('copy-button').onclick = () => navigator.clipboard.writeText(getLink())
+            document.getElementById('alert-button').onclick = () => alert(getLink())
+        })()
+    </script>
 </body>
 </html>
