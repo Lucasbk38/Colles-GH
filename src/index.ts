@@ -23,7 +23,7 @@ for (const eleve of colloscope.eleves) {
             const enseignement = colloscope.enseignements.find(e => e.id === enseignementId)
 
             return {
-                room: rooms.find(room => room.id = identifiant)?.room,
+                room: rooms.find(room => room.id == identifiant)?.room,
                 id: `${ id }-${ semaine }`,
                 identifiant,
                 start: ICalDate.from(new Date(startUTC)),
