@@ -18,13 +18,13 @@
     {"id":"GG","room":"H105"},
     {"id":"LM","room":"A108"},
     {"id":"LV","room":"H101"},
-    {"id":"KA","room":""},
-    {"id":"KA1","room":""},
+    {"id":"KA","room":"B203"},
+    {"id":"KA1","room":"B209"},
     {"id":"JC","room":"A 12"},
-    {"id":"LB1","room":""},
-    {"id":"LB2","room":""},
-    {"id":"AF","room":""},
-    {"id":"AF1","room":""},
-    {"id":"ML","room":""},
-    {"id":"VR","room":""}
+    {"id":"LB1","room":"I211"},
+    {"id":"LB2","room":"I211"},
+    {"id":"AF","room":"I207"},
+    {"id":"AF1","room":"I207"},
+    {"id":"ML","room":"I201"},
+    {"id":"VR","room":"CH02 003"}
 ]
